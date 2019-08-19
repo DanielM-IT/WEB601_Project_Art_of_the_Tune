@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import './App.css'
-// import {Switch, Route} from 'react—router-dom'
-// import Navbar from './Components/Navbar'
-// import Product from './Components/Product'
-// import Details from './Components/Details'
-// import Default from './Components/Default'
+import {Switch, Route} from 'react-router-dom'
+import Navbar from './Components/Navbar'
+import Product from './Components/Product'
+import Details from './Components/Details'
+import Default from './Components/Default'
 import Footer from './Components/Footer'
 
 
@@ -13,12 +13,12 @@ class App extends Component {
     return(
       <div className="container">
         <div className="header">
-          {/* <Navbar />
+          <Navbar />
           <Switch>
             <Route path="/" component={Product} />
-            <Route path="/details" component={Details} />
+            <Route path="./Components/details" component={Details} />
             <Route component={Default} />
-          </Switch> */}
+          </Switch>
         </div>
         <div className="Body">
         </div>
