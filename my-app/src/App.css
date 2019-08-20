@@ -23,5 +23,38 @@ body{
 }
 
 .header {
-  height: 400px;
+  height: 120px;
+  background-color: #232528;
+}
+
+.navbar {
+  padding: 2%;
+}
+
+.body {
+  height: 700px;
+}
+
+.footer {
+  height: 120px;
+  background-color: #232528;
+}
+
+.navbar-logo {
+  height: 80px;
+  width: 100px;
+  float: left;
+}
+
+.creditLink {
+  color: #ffa400;
+}
+
+.nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-item {
+float: left;
 }

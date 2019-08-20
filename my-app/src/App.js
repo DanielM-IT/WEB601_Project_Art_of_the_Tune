@@ -1,11 +1,15 @@
 import React, {Component} from 'react'
 import './App.css'
-import {Switch, Route} from 'react-router-dom'
-import Navbar from './Components/Navbar'
-import Product from './Components/Product'
-import Details from './Components/Details'
-import Default from './Components/Default'
-import Footer from './Components/Footer'
+import {Switch,Route} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Support from './components/Support'
+import MyAccount from './components/MyAccount'
+import Default from './components/Default'
+import BrowseMusic from './components/BrowseMusic'
+import Footer from './components/Footer'
+import Login from './components/Login'
+import SignUp from './components/SignUp';
 
 
 class App extends Component {
@@ -14,13 +18,18 @@ class App extends Component {
       <div className="container">
         <div className="header">
           <Navbar />
-          <Switch>
-            <Route path="/" component={Product} />
-            <Route path="./Components/details" component={Details} />
+
+        </div>
+        <div className="body"> 
+            <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/BrowseMusic" component={BrowseMusic} />
+            <Route path="/Support" component={Support} />
+            <Route path="/Login" component={Login} />
+            <Route path="/SignUp" component={SignUp} />
+            <Route path="/MyAccount" component={MyAccount} />
             <Route component={Default} />
           </Switch>
-        </div>
-        <div className="Body">
         </div>
         <div className="footer">
           <Footer></Footer>
