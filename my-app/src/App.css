@@ -23,16 +23,12 @@ body{
 }
 
 .header {
-  height: 120px;
+  height: 140px;
   background-color: #232528;
 }
 
 .navbar {
   padding: 2%;
-}
-
-.body {
-  height: 700px;
 }
 
 .footer {
@@ -50,11 +46,56 @@ body{
   color: #ffa400;
 }
 
-.nav-link {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .nav-item {
 float: left;
 }
+
+.featureImage {
+  width: 100%;
+  height: auto;
+ }
+
+ .gridContainer {
+   height: 400px;
+ }
+
+ .listColumn {
+   width: 20%;
+   background-color: #36393f;
+   float: left;
+   color: var(--mainWhite);
+   text-align: center;
+   height: 100%;
+ }
+
+ .contentColumn {
+  width: 80%;
+  text-align: center;
+  float: right;
+  background-color: var(--mainWhite);
+ }
+
+ .container {
+   height: 800px;
+ }
+
+ .leftColumn {
+   width: 20%;
+   background-color: #36393f;
+   float: left;
+   height: 100%;
+ }
+
+.middleColumn {
+  width: 60%;
+  float: left;
+  text-align: center;
+}
+ .rightColumn {
+  width: 20%;
+  background-color: #36393f;
+  float: right;
+  height: 100%;
+}
+
+

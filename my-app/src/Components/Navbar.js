@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../icons/musical-notes-symbols.png'
+import {BtnContainer} from './Buttons'
 import styled from 'styled-components'
-
 
 
 
 export default class Navbar extends Component {
     render() {
         return(
-            <nav className="navbar">
+            <NavWrapper className="navbar">
                 <div className="navbar-icon">
                 <Link to='/'>
-                    <img src={logo} alt="store" className="navbar-logo"/>
+                    <img src={logo} alt="musicSite" className="navbar-logo"/>
                 </Link>
                 </div>
                 
@@ -41,22 +41,18 @@ export default class Navbar extends Component {
                         <span>My Account</span>
                     </BtnContainer>
                 </Link>
-                
-  
-            </nav>
+            </NavWrapper>
         )
     }
 }
 
-const BtnContainer = styled.button`
-    text-transform: capitalize;
-    font-size: 1.4rem;
-    color: var(--mainYellow);
-    background: transparent;
-    border: 0.05rem solid var(--lightBlue);
-    border-radius: 0.5rem;
-    padding: 0.2rem 0.5rem;
-    cursor: pointer;
-    margin: 0.2rem 0.5rem 0.2rem;
-    float: right;
+const NavWrapper = styled.nav`
+    background: #232528;
+    .nav-link{
+        padding-left: 20px;
+        padding-right: 20px;
+        color: var(--mainWhite)!important;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+    }
 `
