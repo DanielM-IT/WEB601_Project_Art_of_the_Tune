@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import logo from '../icons/musical-notes-symbols.png'
 import {BtnContainer} from './Buttons'
 import styled from 'styled-components'
+import Dropdown from './Dropdown';
 
 
 
@@ -38,8 +39,10 @@ export default class Navbar extends Component {
                 </Link>   
                 <Link to="/MyAccount">
                     <BtnContainer>
-                        <span>My Account</span>
+                        <Dropdown />
+                          {/* <span>My Account</span>   */}
                     </BtnContainer>
+                    
                 </Link>
             </NavWrapper>
         )

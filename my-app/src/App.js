@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import './App.css'
 import {Switch,Route} from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Support from './components/Support'
-import MyAccount from './components/MyAccount'
-import Default from './components/Default'
-import BrowseMusic from './components/BrowseMusic'
-import Footer from './components/Footer'
-import Login from './components/Login'
-import SignUp from './components/SignUp';
+import Navbar from './Components/Navbar'
+import Home from './Components/Home'
+import Support from './Components/Support'
+import MyAccount from './Components/MyAccount'
+import Default from './Components/Default'
+import BrowseMusic from './Components/BrowseMusic'
+import Footer from './Components/Footer'
+import Login from './Components/Login'
+import SignUp from './Components/SignUp';
 
 
 class App extends Component {
@@ -22,17 +22,17 @@ class App extends Component {
         </div>
         <div className="body"> 
             <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/BrowseMusic" component={BrowseMusic} />
-            <Route path="/Support" component={Support} />
-            <Route path="/Login" component={Login} />
-            <Route path="/SignUp" component={SignUp} />
-            <Route path="/MyAccount" component={MyAccount} />
-            <Route component={Default} />
-          </Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/BrowseMusic" component={BrowseMusic} />
+              <Route path="/Support" component={Support} />
+              <Route path="/Login" component={Login} />
+              <Route path="/SignUp" component={SignUp} />
+              <Route path="/MyAccount" component={MyAccount} />
+              <Route component={Default} />
+            </Switch>
         </div>
         <div className="footer">
-          <Footer></Footer>
+          <Footer />
         </div>
       </div>
     )
