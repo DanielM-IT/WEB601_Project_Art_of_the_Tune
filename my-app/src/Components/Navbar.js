@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import logo from '../icons/musical-notes-symbols.png'
 import {BtnContainer} from './Buttons'
 import styled from 'styled-components'
 import Dropdown from './Dropdown';
@@ -11,39 +10,40 @@ export default class Navbar extends Component {
     render() {
         return(
             <NavWrapper className="navbar">
-                <div className="navbar-icon">
+                <div>
                 <Link to='/'>
-                    <img src={logo} alt="musicSite" className="navbar-logo"/>
+                    <img src='../../icons/musical-notes-symbols.png' alt="musicSite" className="navbar-logo"/>
                 </Link>
                 </div>
                 
-                <ul className="nav-item">
-                    <li className="nav-item">
-                        <Link to="/BrowseMusic" className="nav-link">
-                            Browse Music
-                        </Link>
-                        <Link to="/Support" className="nav-link">
+                <ul className="navbar-item">
+                    <li>
+                        <Link to="/MyAccount" className="navbar-link">
+                            <Dropdown />
+                        </Link>  
+                    </li>  
+                    <li>   
+                        <Link to="/Support" className="navbar-link">
                             Support
                         </Link>
-                    </li>
-                </ul>
-                <Link to="/Login">
-                <BtnContainer>
+                    </li>  
+                    <li>
+                        <Link to="/BrowseMusic" className="navbar-link">
+                            Browse Music
+                        </Link>
+                    </li> 
+                </ul> 
+               
+                <Link to="/Login" style={{float: 'right'}}>
+                    <BtnContainer>
                         <span>Login</span>
                     </BtnContainer>
                 </Link>
-                <Link to="/SignUp">
-                <BtnContainer>
+                <Link to="/SignUp" style={{float: 'right'}}>
+                    <BtnContainer>
                         <span>SignUp</span>
                     </BtnContainer>
                 </Link>   
-                <Link to="/MyAccount">
-                    <BtnContainer>
-                        <Dropdown />
-                          {/* <span>My Account</span>   */}
-                    </BtnContainer>
-                    
-                </Link>
             </NavWrapper>
         )
     }
@@ -51,11 +51,4 @@ export default class Navbar extends Component {
 
 const NavWrapper = styled.nav`
     background: #232528;
-    .nav-link{
-        padding-left: 20px;
-        padding-right: 20px;
-        color: var(--mainWhite)!important;
-        font-size: 1.3rem;
-        text-transform: capitalize;
-    }
 `

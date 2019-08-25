@@ -11,11 +11,10 @@ export const BtnContainer = styled.button`
     padding: 0.2rem 0.5rem;
     cursor: pointer;
     margin: 0.2rem 0.5rem 0.2rem;
-    float: right;
     transition: all 0.1s ease-in-out;
   &:hover {
       backgound: var(--lightBlue);
-      color: var(--mainBlue);
+      color: var(--lightBlue);
   }
   &:focus {
       outline: none;

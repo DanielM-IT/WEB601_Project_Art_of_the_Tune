@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 
-export default class Song extends Component {
+
+export default class Default extends Component {
     render() {
         return(
             <div>
-                <h3>Songs here</h3>
+                <h1>Page not found!</h1>
             </div>
         )
     }

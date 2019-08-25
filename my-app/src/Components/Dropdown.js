@@ -1,58 +1,67 @@
-import React from 'react';
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 
 
-export class Dropdown extends React.Component {
-constructor(){
- super();
+export default class Dropdown extends Component {
 
- this.state = {
-       displayMenu: false,
-     };
+  constructor(){
+    super();
 
-  this.showDropdownMenu = this.showDropdownMenu.bind(this);
-  this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+    this.state = {
+          displayMenu: false,
+        };
 
-};
+      this.showDropdownMenu = this.showDropdownMenu.bind(this);
+      this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+  };
 
-showDropdownMenu(event) {
-    event.preventDefault();
-    this.setState({ displayMenu: true }, () => {
-    document.addEventListener('click', this.hideDropdownMenu);
-    });
-  }
+  showDropdownMenu(event) {
+      this.setState({ displayMenu: true }, () => {
+      document.addEventListener('MouseHover', this.hideDropdownMenu);
+      });
+    }
 
-  hideDropdownMenu() {
-    this.setState({ displayMenu: false }, () => {
-      document.removeEventListener('click', this.hideDropdownMenu);
-    });
+    hideDropdownMenu() {
+      this.setState({ displayMenu: false }, () => {
+        document.removeEventListener('MouseHover', this.hideDropdownMenu);
+      });
+    }
 
-  }
-
-  render() {
-    return (
-        <div  className="dropdown">
-	        <div className="button" onClick={this.showDropdownMenu}> My Account </div>
-
-          { this.state.displayMenu ? (
-          <ul>
-    		   <li>My Account</li>
-    		   <li>Upload Music</li>
-    		   <li>My Music</li>
-    		   <li>Log Out</li>
-          </ul>
-        ):
-        (
-          null
-        )
-        }
-
-	      </div>
-
-    );
-  }
-
-
+    render() {
+      return (
+          <div  className="dropdown" onMouseEnter={this.showDropdownMenu} onMouseLeave={this.hideDropdownMenu}>
+          
+          User Account
+            { this.state.displayMenu ? (
+              <ul>
+                <li>
+                  <Link to="" className="navbar-link">
+                    Log Out
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/MyMusic" className="navbar-link">
+                    My Music
+                  </Link>
+                </li> 
+                <li>
+                  <Link to="/UploadMusic" className="navbar-link">
+                    Upload Music
+                  </Link>
+                </li>                
+                <li>
+                  <Link to="/MyAccount" className="navbar-link">
+                    My Account
+                  </Link>
+                </li>
+              </ul>
+          ):
+          (
+            null
+          )
+          }
+          </div>
+      );
+    }
 }
 
-
-export default Dropdown;

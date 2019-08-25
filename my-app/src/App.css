@@ -1,3 +1,5 @@
+
+/* Core colours used */
 :root{
   --mainBlue: #2a2a72;
   --lightBlue: #009ffd;
@@ -6,12 +8,79 @@
   --mainYellow: #ffa400;
 }
 
+/* Container for body of all pages */
+ .container {
+   height: 1500px;
+ }
+
+
+ /* Header styling */
+ .header {
+  height: 140px;
+  background-color: #232528;
+}
+/* End of header styling */
+
+
+/* All navbar related styling */
+.navbar {
+  padding: 2%;
+}
+
+.navbar-logo {
+  height: 80px;
+  width: 100px;
+  float: left;
+}
+
+.navbar-item {
+float: left;
+}
+
+.navbar-link{
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--mainWhite)!important;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  float: right;
+}
+
+.navbar ul li {
+  float: right;
+}
+
+.dropdown ul li {
+  display: block;
+}
+/* End of navbar related styling */
+
+
+
+/* Body styling */
+
 body{
   font-family: "sans-serif";
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
 
+/* End of body styling */
+
+
+/* All footer related styling */
+.footer {
+  height: 120px;
+  background-color: #232528;
+}
+
+.creditLink {
+  color: #ffa400;
+}
+/* End of footer related styling */
+
+
+/* Titles */
 .text-title{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.3rem;
@@ -21,44 +90,51 @@ body{
 .text-blue {
   color: var(--mainBlue);
 }
+/* End of titles */
 
-.header {
-  height: 140px;
-  background-color: #232528;
-}
 
-.navbar {
-  padding: 2%;
-}
-
-.footer {
-  height: 120px;
-  background-color: #232528;
-}
-
-.navbar-logo {
-  height: 80px;
-  width: 100px;
-  float: left;
-}
-
-.creditLink {
-  color: #ffa400;
-}
-
-.nav-item {
-float: left;
-}
-
+/* Home page */
 .featureImage {
   width: 100%;
   height: auto;
  }
 
- .gridContainer {
-   height: 400px;
+ .tempSearchBar {
+   margin: 0 auto;
+   display: block;
  }
 
+.websitePurposeText {
+  position: absolute;
+  top: 45%;
+  left: 43%;
+  color: red;
+}
+
+.callToAction {
+  position: absolute;
+  bottom: 40%;
+  left: 45%;
+}
+
+ .grid {
+   display: grid;
+   height: 500px;
+   width: 100%;
+   grid-template:  50% 50% 50% / 16% 16% 16% ;
+   grid-gap: 10%;
+   padding-left: 15%;
+   padding-right: 10%;
+   padding-bottom: 10%;
+ }
+
+ .promotionItem {
+  border: solid 1px var(--mainYellow);
+ }
+/* End of home page */
+
+
+/* Browse music page */
  .listColumn {
    width: 20%;
    background-color: #36393f;
@@ -74,10 +150,37 @@ float: left;
   float: right;
   background-color: var(--mainWhite);
  }
+ /* End of browse music page */
 
- .container {
-   height: 800px;
- }
+
+/* Upload music page */
+.uploadItem {
+  border: solid 1px var(--mainYellow);
+  width: 800px;
+}
+/* End of upload music page */
+
+
+/* Login page */
+.login {
+  position: absolute;
+  top: 45%;
+  left: 43%;
+}
+/* End of login page */
+
+
+/* Support page */
+.formBody {
+  width: 80%;
+  margin: 3% auto;
+  height: 95vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+}
+/* End of support page */
+
+
 
  .leftColumn {
    width: 20%;
@@ -97,5 +200,4 @@ float: left;
   float: right;
   height: 100%;
 }
-
 

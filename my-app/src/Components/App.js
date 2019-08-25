@@ -1,15 +1,17 @@
 import React, {Component} from 'react'
-import './App.css'
+import '../App.css'
 import {Switch,Route} from 'react-router-dom'
-import Navbar from './Components/Navbar'
-import Home from './Components/Home'
-import Support from './Components/Support'
-import MyAccount from './Components/MyAccount'
-import Default from './Components/Default'
-import BrowseMusic from './Components/BrowseMusic'
-import Footer from './Components/Footer'
-import Login from './Components/Login'
-import SignUp from './Components/SignUp';
+import Navbar from './Navbar'
+import Home from './pages/Home'
+import Support from './pages/Support'
+import MyAccount from './pages/MyAccount'
+import Default from './pages/Default'
+import BrowseMusic from './pages/BrowseMusic'
+import Footer from './Footer'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+import MyMusic from './pages/MyMusic'
+import UploadMusic from './pages/UploadMusic'
 
 
 class App extends Component {
@@ -28,6 +30,8 @@ class App extends Component {
               <Route path="/Login" component={Login} />
               <Route path="/SignUp" component={SignUp} />
               <Route path="/MyAccount" component={MyAccount} />
+              <Route path="/MyMusic" component={MyMusic} />
+              <Route path="/UploadMusic" component={UploadMusic} />
               <Route component={Default} />
             </Switch>
         </div>
