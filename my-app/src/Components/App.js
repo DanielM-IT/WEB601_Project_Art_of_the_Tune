@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import '../App.css'
 import {Switch,Route} from 'react-router-dom'
 import Navbar from './Navbar'
@@ -14,10 +14,8 @@ import MyMusic from './pages/MyMusic'
 import UploadMusic from './pages/UploadMusic'
 
 
-class App extends Component {
-  render()  {
-    return(
-      <div className="container">
+const App = () => (
+  <div className="container">
         <div className="header">
           <Navbar />
 
@@ -39,10 +37,7 @@ class App extends Component {
           <Footer />
         </div>
       </div>
-    )
-  }
-}
-
+)  
 
 
 export default App;

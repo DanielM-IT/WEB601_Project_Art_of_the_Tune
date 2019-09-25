@@ -5,33 +5,36 @@ import {Link} from 'react-router-dom'
 export default class Dropdown extends Component {
 
   constructor(){
-    super();
+    super()
 
     this.state = {
           displayMenu: false,
-        };
+        }
 
-      this.showDropdownMenu = this.showDropdownMenu.bind(this);
-      this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+      this.showDropdownMenu = this.showDropdownMenu.bind(this)
+      this.hideDropdownMenu = this.hideDropdownMenu.bind(this)
   };
 
   showDropdownMenu(event) {
+      event.preventDefault()
       this.setState({ displayMenu: true }, () => {
-      document.addEventListener('MouseHover', this.hideDropdownMenu);
-      });
+      document.addEventListener('MouseHover', this.hideDropdownMenu)
+      })
     }
 
     hideDropdownMenu() {
       this.setState({ displayMenu: false }, () => {
-        document.removeEventListener('MouseHover', this.hideDropdownMenu);
-      });
+        document.removeEventListener('MouseHover', this.hideDropdownMenu)
+      })
     }
 
     render() {
       return (
-          <div  className="dropdown" onMouseEnter={this.showDropdownMenu} onMouseLeave={this.hideDropdownMenu}>
+          <div className= "dropdown">
+            <div  className="dropdownButton" onMouseEnter={this.showDropdownMenu} onMouseLeave={this.hideDropdownMenu} >
+              User Account
           
-          User Account
+          
             { this.state.displayMenu ? (
               <ul>
                 <li>
@@ -61,6 +64,7 @@ export default class Dropdown extends Component {
           )
           }
           </div>
+        </div>
       );
     }
 }
