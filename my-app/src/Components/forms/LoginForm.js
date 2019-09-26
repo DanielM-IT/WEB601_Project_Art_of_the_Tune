@@ -59,7 +59,7 @@ class LoginForm extends React.Component {
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="Make it secure"
+                    placeholder="Password1"
                     value={data.password}
                     onChange={this.onChange}
                     />

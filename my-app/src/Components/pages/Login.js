@@ -11,10 +11,20 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <Title name="Sign Up" title="Here" />
-        <LoginForm submit={this.submit} />
-      </div>
+      <div className="loginContainer">
+
+        <section className="loginPage">
+          <Title name="User" title="Login" />
+
+                        <form>
+                        <div className='loginForm'>
+              <LoginForm submit={this.submit} />
+            </div>
+
+                        </form>
+                    </section>
+
+      </div> 
     )
   }
 }

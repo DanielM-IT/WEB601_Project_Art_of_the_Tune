@@ -1,17 +1,17 @@
 import React from 'react'
-import '../App.css'
+import './App.css'
 import {Switch,Route} from 'react-router-dom'
-import Navbar from './Navbar'
-import Home from './pages/Home'
-import Support from './pages/Support'
-import MyAccount from './pages/MyAccount'
-import Default from './pages/Default'
-import BrowseMusic from './pages/BrowseMusic'
-import Footer from './Footer'
-import Login from './pages/Login'
-import SignUp from './pages/SignUp'
-import MyMusic from './pages/MyMusic'
-import UploadMusic from './pages/UploadMusic'
+import Navbar from './Components/Navbar'
+import Home from './Components/pages/Home'
+import Support from './Components/pages/Support'
+import MyAccount from './Components/pages/MyAccount'
+import Default from './Components/pages/Default'
+import BrowseMusic from './Components/pages/BrowseMusic'
+import Footer from './Components/Footer'
+import Login from './Components/pages/Login'
+import SignUp from './Components/pages/SignUp'
+import MyMusic from './Components/pages/MyMusic'
+import UploadMusic from './Components/pages/UploadMusic'
 
 
 const App = () => (
@@ -41,3 +41,6 @@ const App = () => (
 
 
 export default App;
+
+
+

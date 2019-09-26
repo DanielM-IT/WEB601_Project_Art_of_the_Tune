@@ -8,7 +8,7 @@ function userAccountList (req, res) {
     res.end(JSON.stringify(data));
 }
 
-function addNewAccount (req, res) {
+function addNewUserAccount (req, res) {
     
     let body = '';
 
@@ -33,14 +33,14 @@ function errorRequest(req, res) {
 }
 
 const server = http.createServer((req, res) => {
-    const urlAccounts = url.parse(req.url)
-    if (urlAccounts.pathname === '/api/accounts') {
+    const urlUserAccounts = url.parse(req.url)
+    if (urlUserAccounts.pathname === '/api/userAccounts') {
         switch (req.method) {
             case 'GET':
                 userAccountList(req, res)
                 break;
             case 'POST':
-                addNewAccount(req, res)
+                addNewUserAccount(req, res)
                 break;
             default:
                 errorRequest(req, res)

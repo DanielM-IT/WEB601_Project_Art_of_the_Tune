@@ -10,14 +10,14 @@
 
 /* Container for body of all pages */
  .container {
-   height: 1500px;
+   height: 100vh;
    background-color: #C0C0C0;
  }
 
 
  /* Header styling */
  .header {
-  height: 140px;
+  height: 15vh;
   background-color: #232528;
 }
 /* End of header styling */
@@ -70,7 +70,7 @@ body{
 
 /* All footer related styling */
 .footer {
-  height: 120px;
+  height: 15vh;
   background-color: #232528;
 }
 
@@ -163,13 +163,46 @@ body{
 
 
 /* Login page */
-.login {
-  position: absolute;
-  top: 45%;
-  left: 43%;
+.loginContainer {
+  height: 70vh;
+  background-color: #54585f;
+  padding: 4%;
+}
+
+.loginPage { 
+  height: 40vh;
+  text-align: center;
+  padding-top: 3.5%;
+  width: 30%;
+  margin: 3% auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+
+}
+
+.loginForm {
+  margin-left: 22%;
+  margin-right: 22%;
+  margin-top: 5%;
 }
 /* End of login page */
 
+/* SignUp Page */
+.signUpContainer {
+  background-color: #54585f;
+  padding: 4%;
+}
+
+.signUpForm {
+  width: 80%;
+  margin: 3% auto;
+  height: 95vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* End of signup page */
 
 /* Support page */
 .formBody {
@@ -195,6 +228,7 @@ body{
   float: left;
   text-align: center;
 }
+
  .rightColumn {
   width: 20%;
   background-color: #36393f;
