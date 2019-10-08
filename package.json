@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "knex": "^0.19.4",
+    "knex": "^0.19.5",
     "mysql2": "^1.7.0",
     "nodemon": "^1.19.2",
     "prop-types": "^15.7.2",
@@ -25,7 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "nodemon apis.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-app-rewired": "^2.1.3"
   }
 }
