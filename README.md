@@ -1,5 +1,5 @@
 
-#<em>This repository has been discontinued and the project restructured here https://github.com/DanielM-IT/WEB601_Project </em>
+# <em>This repository has been discontinued and the project restructured here https://github.com/DanielM-IT/WEB601_Project </em>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
